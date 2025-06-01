@@ -386,6 +386,158 @@
           </div>
         </div>
       </section>
+
+      <!-- Contact -->
+      <section id="contact" class="contact">
+        <div class="container">
+          <h2>Mari Bekerja Sama</h2>
+          <p class="section-description">
+            Siap memulai proyek berikutnya? Saya ingin mendengar dari Anda!
+          </p>
+
+          <!-- Contact CTA Section -->
+          <div class="contact-cta">
+            <h3>Siap Memulai Proyek Anda?</h3>
+            <p>
+              Mari diskusikan ide Anda dan wujudkan bersama-sama. Saya di sini
+              untuk membantu Anda menciptakan sesuatu yang luar biasa!
+            </p>
+            <a href="#contact-form" class="contact-form-trigger">
+              <span>Kirim Pesan</span>
+              <i class="bi bi-send-fill"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Form Modal -->
+      <div id="contact-form" class="contact-modal">
+        <div class="contact-modal-overlay">
+          <div class="contact-modal-content">
+            <div class="contact-modal-header">
+              <h3>Kirim Pesan</h3>
+              <a
+                href="#contact"
+                class="close-modal"
+                aria-label="Tutup formulir"
+              >
+                <i class="bi bi-x-lg"></i>
+              </a>
+            </div>
+
+            <form class="contact-form" action="#" method="POST">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Nama Lengkap *</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    placeholder="Masukkan nama lengkap Anda"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Alamat Email *</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="Masukkan alamat email Anda"
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phone">Nomor Telepon</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Masukkan nomor telepon Anda"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="subject">Subjek *</label>
+                  <select id="subject" name="subject" required>
+                    <option value="">Pilih subjek</option>
+                    <option value="web-development">
+                      Proyek Pengembangan Web
+                    </option>
+                    <option value="consultation">Konsultasi</option>
+                    <option value="collaboration">Kolaborasi</option>
+                    <option value="other">Lainnya</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="budget">Anggaran Proyek</label>
+                  <select id="budget" name="budget">
+                    <option value="">Pilih rentang anggaran</option>
+                    <option value="under-1m">Di bawah Rp 1.000.000</option>
+                    <option value="1m-5m">Rp 1.000.000 - Rp 5.000.000</option>
+                    <option value="5m-10m">Rp 5.000.000 - Rp 10.000.000</option>
+                    <option value="above-10m">Di atas Rp 10.000.000</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="timeline">Timeline Proyek</label>
+                  <select id="timeline" name="timeline">
+                    <option value="">Pilih timeline</option>
+                    <option value="asap">Secepatnya</option>
+                    <option value="1-week">Dalam 1 minggu</option>
+                    <option value="1-month">Dalam 1 bulan</option>
+                    <option value="3-months">Dalam 3 bulan</option>
+                    <option value="flexible">Fleksibel</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Pesan *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  placeholder="Ceritakan tentang proyek Anda, kebutuhan, atau pertanyaan yang Anda miliki..."
+                ></textarea>
+              </div>
+
+              <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="newsletter" name="newsletter" />
+                  <span class="checkmark"></span>
+                  Berlangganan newsletter saya untuk tips pengembangan web dan
+                  update
+                </label>
+              </div>
+
+              <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="privacy" name="privacy" required />
+                  <span class="checkmark"></span>
+                  Saya setuju dengan
+                  <a href="#" target="_blank">Kebijakan Privasi</a> dan
+                  <a href="#" target="_blank">Syarat Layanan</a> *
+                </label>
+              </div>
+
+              <button type="submit" class="submit-btn">
+                <span>Kirim Pesan</span>
+                <i class="bi bi-send-fill"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
 </html>

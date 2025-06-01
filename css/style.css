@@ -439,6 +439,290 @@ body {
   font-size: 0.9rem;
 }
 
+/* Contact Section */
+.contact {
+  padding: 100px 0;
+  background: #f8fafc;
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1e293b;
+}
+
+.contact .section-description {
+  text-align: center;
+  color: #64748b;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Contact CTA */
+.contact-cta {
+  background: white;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-cta h3 {
+  color: #1e293b;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.contact-cta p {
+  color: #64748b;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.contact-form-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 18px 35px;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-form-trigger:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.4);
+}
+
+.contact-form-trigger::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.contact-form-trigger:hover::before {
+  left: 100%;
+}
+
+/* Modal Contct Form */
+.contact-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.contact-modal:target {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.contact-modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.contact-modal-content {
+  background: white;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.contact-modal:target .contact-modal-content {
+  transform: scale(1);
+}
+
+.contact-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  background: #2563eb;
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
+
+.contact-modal-header h3 {
+  color: white;
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.close-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 18px;
+}
+
+.close-modal:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Contact Form */
+.contact-form {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: #374151;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-group select {
+  cursor: pointer;
+  appearance: none;
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+/* Checkbox Form */
+.checkbox-group {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #374151;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.checkbox-label a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.checkbox-label a:hover {
+  text-decoration: underline;
+}
+
+/* Submit Button */
+.submit-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.submit-btn:hover {
+  background: #1d4ed8;
+}
+
+.submit-btn i {
+  font-size: 16px;
+}
+
 /* Responsive for Tablet */
 @media screen and (max-width: 1024px) {
   /* Navbar */
@@ -473,6 +757,15 @@ body {
   .hero-image img {
     width: 300px;
     height: 300px;
+  }
+
+  /* Modal Contact Form */
+  .contact-modal-overlay {
+    padding: 15px;
+  }
+
+  .contact-modal-content {
+    max-width: 450px;
   }
 }
 
@@ -680,6 +973,103 @@ body {
 
   .testimonial-item {
     padding: 1.5rem;
+  }
+
+  /* Contact Section */
+  .contact {
+    padding: 60px 0;
+  }
+
+  .contact .container {
+    width: 100%;
+    margin: auto;
+    padding: 2rem;
+  }
+
+  .contact h2 {
+    font-size: 2rem;
+  }
+
+  .contact .section-description {
+    font-size: 1rem;
+  }
+
+  .contact-cta {
+    padding: 2rem;
+    margin: 0 1rem;
+  }
+
+  .contact-cta h3 {
+    font-size: 1.5rem;
+  }
+
+  .contact-cta p {
+    font-size: 1rem;
+  }
+
+  .contact-form-trigger {
+    padding: 15px 25px;
+    font-size: 1rem;
+  }
+
+  /* Contact Section */
+  .contact {
+    padding: 60px 0;
+  }
+
+  .contact .container {
+    width: 100%;
+    margin: auto;
+    padding: 2rem;
+  }
+
+  .contact h2 {
+    font-size: 2rem;
+  }
+
+  .contact .section-description {
+    font-size: 1rem;
+  }
+
+  .contact-cta {
+    padding: 2rem;
+    margin: 0 1rem;
+  }
+
+  .contact-cta h3 {
+    font-size: 1.5rem;
+  }
+
+  .contact-cta p {
+    font-size: 1rem;
+  }
+
+  .contact-form-trigger {
+    padding: 15px 25px;
+    font-size: 1rem;
+  }
+
+  /* Modal Contact Form */
+  .contact-modal-overlay {
+    padding: 10px;
+  }
+
+  .contact-modal-content {
+    max-width: 100%;
+    max-height: 95vh;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+    gap: 1.25rem;
+  }
+
+  .contact-modal-header {
+    padding: 1rem 1.5rem;
+  }
+
+  .contact-modal-header h3 {
+    font-size: 1.1rem;
   }
 }
 
