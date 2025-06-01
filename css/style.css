@@ -723,6 +723,69 @@ body {
   font-size: 16px;
 }
 
+/* Footer */
+.footer {
+  background-color: #0f172a;
+  padding: 3rem 0 2rem;
+  color: white;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-logo h3 {
+  color: #2563eb;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
 /* Responsive for Tablet */
 @media screen and (max-width: 1024px) {
   /* Navbar */
@@ -1070,6 +1133,13 @@ body {
 
   .contact-modal-header h3 {
     font-size: 1.1rem;
+  }
+
+  /* Footer */
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
   }
 }
 
